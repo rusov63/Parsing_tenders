@@ -13,12 +13,12 @@
 ## Основные этапы реализации
 
 ### Компоненты системы:
-- `fetch__tender__links(page__number: int) -> List[str]`:
+- `fetch_tender_links(page__number: int) -> List[str]`:
 - Асинхронно получает список ссылок на тендеры с указанной страницы
 - Использует Playwright для обработки динамического контента
 - Возвращает список URL печатных форм тендеров
 
-- `parse__tender__xml(session: aiohttp.ClientSession, url: str) -> Tuple[str, str]`:
+- `parse_tender_xml(session: aiohttp.ClientSession, url: str) -> Tuple[str, str]`:
 - Асинхронно извлекает дату публикации из XML документа тендера
 - Обрабатывает XML-данные с использованием BeautifulSoup
 - Возвращает кортеж с URL тендера и датой публикации
